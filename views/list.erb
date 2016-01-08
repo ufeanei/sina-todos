@@ -12,7 +12,7 @@
     </ul>
   </header>
   <ul>
-  	<% @list[:todos].each_with_index do |todo, index| %>
+    <% @list[:todos].each_with_index do |todo, index| %>
     <% if todo[:completed] %>
       <li class = "completed">
     <% else %>
@@ -22,7 +22,7 @@
           <input type ="hidden" name ="completed" value ="<%= !todo[:completed] %>" />
           <button type="submit">Complete</button>
         </form>
-      	<h3> <%= todo[:name] %></h3>
+        <h3> <%= todo[:name] %></h3>
         <form action="/lists/<%= @list_id %>/todos/<%= index %>/destroy" method="post" class="delete">
           <button type="submit">Delete</button>
         </form>

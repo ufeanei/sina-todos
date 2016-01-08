@@ -4,12 +4,12 @@
   <% @lists.each_with_index do |list, index| %>
    
     <li class = "<%= list_class(list) %>">
-	    <a href="/lists/<%=index %>">
-		    <h2><%= list[:name] %></h2>
-		    <p> 
-		    	<%= todos_remaining_count(list) %>/ <%= todos_count(list) %>
-		     </p>
-	    </a>
+      <a href="/lists/<%=index %>">
+        <h2><%= list[:name] %></h2>
+        <p> 
+          <%= todos_remaining_count(list) %>/ <%= todos_count(list) %>
+         </p>
+      </a>
     </li>
   <% end %>
 </ul>

@@ -6,6 +6,6 @@ ruby "2.2.4"
 gem "erubis"
 
 group :development do 
-	gem "puma"
+  gem "puma"
 end
 
